@@ -1,6 +1,6 @@
-a lightweight autosuggest plugin for usage on goingslowly.com
+# a lightweight autosuggest plugin for usage on goingslowly.com
 
-initialization options
+## initialization options
 
     $('#autosuggest').autosuggest(
     {
@@ -16,7 +16,7 @@ initialization options
       highlight:true // describe this
     };
     
-sample JSON data
+## sample JSON data
 
     var blog_entries =
     [
