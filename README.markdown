@@ -1,7 +1,6 @@
 # a lightweight autosuggest plugin for usage on goingslowly.com
 
-    ### initialization options
-    
+### initialization options
     $('#autosuggest').autosuggest(
     {
       data:{}, // JSON data to search
@@ -18,8 +17,7 @@
       highlight:true // true of matching portion of word should be highlighted
     };
     
-    ### sample JSON data
-
+### sample JSON data
     var blog_entries =
     [
       {
