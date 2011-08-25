@@ -1,40 +1,42 @@
 # a lightweight autosuggest plugin for usage on goingslowly.com
 
-## initialization options
-
+    ### initialization options
+    
     $('#autosuggest').autosuggest(
     {
-      data:{}, // describe this
-      delay:400, // describe this
-      minChars:3, // describe this
-      key:'name', // describe this
-      val:'value', // describe this
-      prefix:'prefix', // describe this
-      offsetTop:20, // describe this
-      offsetLeft:0, // describe this
-      logger:function(q){}, // describe this
-      highlight:true // describe this
+      data:{}, // JSON data to search
+      delaySearch:100, // delay from last typed letter before searching
+      delayClose:1500, // delay to close results after mouseout
+      minChars:3, // minimum number of characters required to start search
+      key:'name', // data object property name for field to search
+      val:'url', // data object property name for url of hit
+      prefix:'prefix', // data object property name for prefixed hits
+                       // this should be placed at the end of the object
+                       // so they display first
+      offsetTop:0, // offset placement of results from top
+      offsetLeft:0, // offset placement of results from left
+      highlight:true // true of matching portion of word should be highlighted
     };
     
-## sample JSON data
+    ### sample JSON data
 
     var blog_entries =
     [
       {
-        value:'http://www.blog.com/blog-entry-one/',
-        key:'My First Blog Entry'
+        name:'My First Blog Entry',
+        url:'http://www.blog.com/blog-entry-one/'
       },
       {
-        value:'http://www.blog.com/blog-entry-two/',
-        key:'Blog Entry Number Two'
+        name:'Blog Entry Number Two',
+        url:'http://www.blog.com/blog-entry-two/'
       },
       {
-        value:'http://www.blog.com/blog-entry-three/',
-        key:'Title of Third Blog'
+        name:'Title of Third Blog',
+        url:'http://www.blog.com/blog-entry-three/'
       },
       {
-        value:'http://www.blog.com/topic/blogs/',
-        key:'Blogs'
-        prefix:'Topic'
+        name:'Blogs',
+        url:'http://www.blog.com/topic/blogs/',
+        prefix:'Topic:'
       }
     ];
