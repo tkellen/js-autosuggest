@@ -1,4 +1,4 @@
-# a lightweight autosuggest plugin for usage on goingslowly.com
+# a lightweight jQuery plugin for autosuggest searching on goingslowly.com
 
 ### initialization options
     $('#autosuggest').autosuggest(
